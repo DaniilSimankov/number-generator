@@ -22,7 +22,7 @@ public class NumberServiceImpl implements NumberService {
 
 
     @Override
-    public String generateNextNumber() {
+    public String generateNextNumber() throws NumberLimitException {
 
         StringBuilder result = new StringBuilder();
 
@@ -45,7 +45,7 @@ public class NumberServiceImpl implements NumberService {
     }
 
     @Override
-    public String generateRandomNumber() {
+    public String generateRandomNumber() throws NumberLimitException {
         StringBuilder result = new StringBuilder();
 
         Random random = new Random();
@@ -141,7 +141,7 @@ public class NumberServiceImpl implements NumberService {
     /**
      * Функция инкрементирования номера
      */
-    private void incrementNumber() {
+    private void incrementNumber() throws NumberLimitException {
         currentNumber++;
 
         if (isGreaterThanMaxNumber(currentNumber)) {

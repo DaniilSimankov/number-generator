@@ -1,8 +1,10 @@
 package org.example.service;
 
 
-public interface NumberService {
-    String generateNextNumber();
+import org.example.exception.NumberLimitException;
 
-    String generateRandomNumber();
+public interface NumberService {
+    String generateNextNumber() throws NumberLimitException;
+
+    String generateRandomNumber() throws NumberLimitException;
 }
