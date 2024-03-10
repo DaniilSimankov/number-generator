@@ -1,0 +1,5 @@
+GET http://localhost:8080/number/next
+
+###
+
+GET http://localhost:8080/number/random
